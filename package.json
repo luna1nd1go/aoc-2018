@@ -1,0 +1,22 @@
+{
+  "name": "aoc-2018",
+  "version": "1.0.0",
+  "description": "My solutions to the 2018 advent of code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luna1nd1go/aoc-2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luna1nd1go/aoc-2018/issues"
+  },
+  "homepage": "https://github.com/luna1nd1go/aoc-2018#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}

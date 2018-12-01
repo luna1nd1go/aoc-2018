@@ -5,19 +5,20 @@
 
 // set up arguments
 const args = process.argv.slice(2);
-const problem_no = parseInt(args[0]);
+const problem_no = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 2 }).format(args[0]);
 const part = args[1];
 
 // load the problem
-const num_formatted = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 2 }).format(problem_no)
-const problem = require(`./problems/p${num_formatted}`);
+const problem = require(`./problems/p${problem_no}`);
 
 // load the data
 const fs = require('fs');
-fs.readFile(`./data/p${num_formatted}.txt`, function(err, dat) {
+fs.readFile(`./data/p${problem_no}.txt`, function(err, raw) {
     if (err) console.error("Could not load data!")
-    const data = dat.toString('utf-8')
-    if (part == 'a' | part == 'A') problem.runA(data.split("\n"));
-    else problem.runB(data.split("\n"));
+
+    // read file, process part
+    const data = raw.toString('utf-8').split("\n");
+    if (part.toLowerCase() == "a") problem.runA(data);
+    else if (part.toLowerCase() == "b") problem.runB(data);
 })
 

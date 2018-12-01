@@ -14,9 +14,10 @@ const problem = require(`./problems/p${num_formatted}`);
 
 // load the data
 const fs = require('fs');
-fs.readFile(`./data/p${num_formatted}.txt`, function(err, data) {
+fs.readFile(`./data/p${num_formatted}.txt`, function(err, dat) {
     if (err) console.error("Could not load data!")
-    else if (part == 'a' | part == 'A') problem.runA(data);
-    else part.runB(data);
+    const data = dat.toString('utf-8')
+    if (part == 'a' | part == 'A') problem.runA(data.split("\n"));
+    else problem.runB(data.split("\n"));
 })
 

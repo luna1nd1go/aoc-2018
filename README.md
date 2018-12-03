@@ -5,7 +5,7 @@ My solutions to the 2018 advent of code.
 | Problem # | done A? | done B? | Problem # | done A? | done B? |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Done | Done | 14 | * | * |
-| 2 | * | * | 15 | * | * |
+| 2 | Done | Done | 15 | * | * |
 | 3 | * | * | 16 | * | * |
 | 4 | * | * | 17 | * | * |
 | 5 | * | * | 18 | * | * |
